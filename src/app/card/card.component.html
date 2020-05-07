@@ -1,0 +1,10 @@
+<div class="card" style="width: 24rem;">
+    <ng-content select="[picture]"></ng-content>
+    <div class="card-body">
+      <h5 class="card-title"> <ng-content select="[title]"></ng-content></h5>
+      <p class="card-text"> <ng-content select="[description]"></ng-content></p>
+      <ng-content select="[button]"></ng-content>
+      <ng-content select="[price]"></ng-content>
+      <ng-content select="[rating]"></ng-content>
+    </div>
+</div>

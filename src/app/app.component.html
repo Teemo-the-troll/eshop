@@ -1,20 +1,22 @@
-<h1 class="h1">this is heading h1</h1>
-<h2>this is heading h2</h2>
-<h3>this is heading h3</h3>
-<h4>this is heading h4</h4>
-<h5>this is heading h5</h5>
-<h6>this is heading h6</h6>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quaerat dolores odio nemo eum quasi quod, repellendus quo ab facilis, tempora accusantium distinctio deleniti repellat non, ea a voluptatibus officiis.</p>
-<button class="btn btn-primary">Primary</button>
-<button class="btn btn-secondary">Secondary</button>
-<button class="btn btn-danger">Danger</button>
-<button class="btn btn-dark">Dark</button>
-<button class="btn btn-light">Light</button>
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+  <div id="categories">
+    <div *ngFor="let i of categories">
+      <button class="btn btn-light" (click)="getCategory(i.id)"> {{i.name}}</button>
     </div>
   </div>
+
+  <div id="products">
+    <app-card *ngFor="let product of products">
+      <img
+        style="width: 24rem; height: 18rem;"
+        picture
+        src="/rest-api/{{ product.images[0].miniaturePath }}"
+      />
+      <h5 title>{{ product.title }}</h5>
+      <a class="btn btn-primary" button>Detail</a>
+      <b price> {{ product.price }}</b>
+    </app-card>
+  </div>
+
+  <div id="filter"></div>
+</div>
