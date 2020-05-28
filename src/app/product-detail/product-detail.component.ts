@@ -59,7 +59,8 @@ export class ProductDetailComponent implements OnInit {
       (data) => {
         this.product = data.body;
         this.parameters = data.body.parameters;
-
+        console.log(this.product);
+        
         this.calculateRating()
       },
       (error) => {
