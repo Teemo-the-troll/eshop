@@ -15,7 +15,7 @@ interface Image {
   miniaturePath: string;
   path: string;
 }
-interface Rating {
+export interface Rating {
   percent: number;
   fullName: string;
   description: string;
@@ -24,10 +24,12 @@ interface Rating {
 export interface Product {
   id: number;
   title: string;
-  descriprion: string;
+  description: string;
   unitsOnStock: number;
   price: number;
   images: Image[];
   parameters: [];
   ratings: Rating[];
 }
+
+

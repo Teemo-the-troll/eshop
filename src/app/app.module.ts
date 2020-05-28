@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { VarService } from './var.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './card/card.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { StockComponent } from './stock/stock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    ProductDetailComponent,
+    StockComponent
   ],
   imports: [
     BrowserModule,

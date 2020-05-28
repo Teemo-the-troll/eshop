@@ -1,0 +1,17 @@
+<h1>{{product.title}}</h1>
+<h3>{{avgRating}} %</h3>
+
+<div>
+    <a>Kartou</a>
+    <a>Bankovnim prevodem</a>
+    <a>Hotove</a>
+    <button type="button" class="btn btn-secondary">aaaaaa</button>
+</div>
+<img src="/rest-api/{{product.images[2].miniaturePath}}" alt="">
+
+
+<ul>
+    <li *ngFor="let recipient of params | keyvalue">
+        {{recipient.key}} --> {{recipient.value}}
+    </li>
+</ul>

@@ -1,22 +1,2 @@
-<div class="container">
-  <div id="categories">
-    <div *ngFor="let i of categories">
-      <button class="btn btn-light" (click)="getCategory(i.id)"> {{i.name}}</button>
-    </div>
-  </div>
-
-  <div id="products">
-    <app-card *ngFor="let product of products">
-      <img
-        style="width: 24rem; height: 18rem;"
-        picture
-        src="/rest-api/{{ product.images[0].miniaturePath }}"
-      />
-      <h5 title>{{ product.title }}</h5>
-      <a class="btn btn-primary" button>Detail</a>
-      <b price> {{ product.price/100}} Kč</b>
-    </app-card>
-  </div>
-
-  <div id="filter"></div>
-</div>
+<router-outlet></router-outlet>
+<footer></footer>
